@@ -18,6 +18,4 @@ i will also use AI more wisely, with the goal of learning, instead of wanting th
 
 enough yapping, let's get to work!
 
-
-
-
+## 6/6/2025
