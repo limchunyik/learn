@@ -1,4 +1,4 @@
-import { User } from './User';
+// import { User } from './User';
 import './App.css';
 
 // function App() {
@@ -96,10 +96,6 @@ function App() {
 
   return (
     <div className="App">
-      {planets.map((planet, key) => {
-        if (planet.isGasPlanet) return <h1> {planet.name} </h1>;
-      })}
-
       {planets.map((planet, key) => planet.isGasPlanet && <h1> {planet.name}</h1>)}
     </div>
   )
