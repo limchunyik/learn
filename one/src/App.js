@@ -1,5 +1,5 @@
 // import { User } from './User';
-import './App.css';
+// import "./App.css";
 
 // function App() {
 //   // passing props, use curly brackets for numbers
@@ -40,9 +40,7 @@ import './App.css';
 //   )
 // }
 
-
 // export default App;
-
 
 // function App() {
 //   const age = 19;
@@ -59,7 +57,6 @@ import './App.css';
 // }
 
 // export default App;
-
 
 // function App() {
 
@@ -82,23 +79,101 @@ import './App.css';
 
 // export default App;
 
+// function App() {
+
+//   const planets = [
+//     { name: "Mars", isGasPlanet: false },
+//     { name: "Earth", isGasPlanet: false },
+//     { name: "Jupiter", isGasPlanet: true },
+//     { name: "Venue", isGasPlanet: false },
+//     { name: "Neptune", isGasPlanet: true },
+//     { name: "Uranus", isGasPlanet: true },
+//   ];
+
+//   return (
+//     <div className="App">
+//       {planets.map((planet, key) => planet.isGasPlanet && <h1> {planet.name}</h1>)}
+//     </div>
+//   )
+// }
+
+// export default App;
+
+// import { useState } from "react";
+
+// function App() {
+//   const [age, setAge] = useState(0) // initial value 0
+
+//   const increaseAge = () => {
+//     setAge(age + 1)
+//   };
+
+//   return <div className="App">
+//     {/* initially, look age value of age, displays it, doesn't rerender even after change*/}
+//     {age}
+//     <button onClick={increaseAge}> Increase Age </button>
+
+//   </div>;
+// }
+
+// function App() {
+//   const [inputValue, setInputValue] = useState("");
+
+//   const handleInputChange = (event) => {
+//     setInputValue(event.target.value);
+//   }
+
+//   return (
+//     <div className="App">
+//       <input type="text" onChange={handleInputChange} />
+//       {inputValue}
+//     </div>
+//   )
+// }
+
+// function App() {
+//   const [showText, setShowText] = useState(true);
+//   const [textColor, setTextColor] = useState("");
+
+//   return (
+//     <div className="App">
+//       <button
+//         onClick={() => {
+//           setShowText(!showText);
+//         }}
+//       >
+//         Show/Hide
+//       </button>
+//       {showText && <h1>hello</h1>}
+
+//       <button
+//         onClick={() => {
+//           setTextColor(textColor === "black" ? "red" : "black");
+//         }}
+//       >
+//         <h1 style={{ color: textColor }}> change color</h1>
+//       </button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import "./App.css";
+import { useState } from "react";
 
 function App() {
-
-  const planets = [
-    { name: "Mars", isGasPlanet: false },
-    { name: "Earth", isGasPlanet: false },
-    { name: "Jupiter", isGasPlanet: true },
-    { name: "Venue", isGasPlanet: false },
-    { name: "Neptune", isGasPlanet: true },
-    { name: "Uranus", isGasPlanet: true },
-  ];
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      {planets.map((planet, key) => planet.isGasPlanet && <h1> {planet.name}</h1>)}
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <button onClick={() => setCount(count - 1)}>Decrease</button>
+      <button onClick={() => setCount(0)}>Set to Zero</button>
+
+      {count}
     </div>
-  )
+  );
 }
 
 export default App;
